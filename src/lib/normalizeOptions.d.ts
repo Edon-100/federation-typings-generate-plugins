@@ -1,0 +1,31 @@
+import ts from 'typescript';
+import { Compiler } from 'webpack';
+import type { FederatedTypesPluginOptions, TypeServeOptions } from '../types';
+export type NormalizeOptions = ReturnType<typeof normalizeOptions>;
+export declare const DEFAULT_FETCH_TIMEOUT = 3000;
+export declare const DEFAULT_FETCH_MAX_RETRY_ATTEMPTS = 3;
+export declare const DEFAULT_FETCH_RETRY_DELAY = 1000;
+export declare const validateTypeServeOptions: (options: TypeServeOptions) => void;
+export declare const isObjectEmpty: <T extends object>(obj: T) => boolean;
+export declare const normalizeOptions: (options: FederatedTypesPluginOptions, compiler: Compiler) => {
+    typeFetchOptions: {
+        downloadRemoteTypesTimeout?: number | undefined;
+        maxRetryAttempts?: number | undefined;
+        retryDelay?: number | undefined;
+        shouldRetryOnTypesNotFound?: boolean | undefined;
+        shouldRetry?: boolean | undefined;
+    };
+    distDir: string;
+    publicPath: string;
+    tsCompilerOptions: ts.CompilerOptions;
+    typesIndexJsonFileName: string;
+    typesIndexJsonFilePath: string;
+    typescriptFolderName: string;
+    webpackCompilerOptions: import("webpack").WebpackOptionsNormalized;
+    ignoredWatchOptions: string[];
+    disableTypeCompilation: boolean;
+    disableDownloadingRemoteTypes: boolean;
+    additionalFilesToCompile: string[];
+    compiler: "tsc" | "vue-tsc";
+    typeServeOptions?: TypeServeOptions | undefined;
+};
