@@ -55,5 +55,18 @@
     "@module-federation/utilities": "3.0.0",
     "webpack-sources": "3.2.3"
   },
-  "main": "./src/index.js"
+  "main": "./src/index.js",
+  "types": "./src/index.d.ts",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Edon-100/federation-typings-generate-plugins.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Edon-100/federation-typings-generate-plugins/issues"
+  },
+  "homepage": "https://github.com/Edon-100/federation-typings-generate-plugins#readme"
 }
