@@ -1,6 +1,6 @@
 {
   "name": "federation-typings-generate-plugins",
-  "version": "3.1.1",
+  "version": "1.0.0",
   "description": "Webpack plugin to stream typescript for module federation apps/components",
   "license": "MIT",
   "type": "commonjs",
